@@ -581,11 +581,6 @@ label.abil{cursor:text}
         <label class="custom-color" style="margin-top:10px"><input type="color" id="accentCustom" value="#C8302C" aria-label="Accent colour">Pick any colour</label>
       </div>
       <div class="card">
-        <h3>Dice tray colour</h3>
-        <div class="swatches" id="traySwatches"></div>
-        <label class="custom-color" style="margin-top:10px"><input type="color" id="trayCustom" value="#1F5A3A" aria-label="Dice tray colour">Pick any colour</label>
-      </div>
-      <div class="card">
         <h3>Appearance</h3>
         <div class="seg" id="themeSeg">
           <button data-theme-opt="system">System</button><button data-theme-opt="light">Light</button><button data-theme-opt="dark">Dark</button>
@@ -643,6 +638,12 @@ label.abil{cursor:text}
         <div class="field"><label class="lab" for="sizeRange">Die size: <span id="sizeLabel"></span></label><input type="range" id="sizeRange" min="60" max="140" step="5"></div>
       </div>
       <div class="btn-row"><button class="btn primary grow" id="skinSave">Save and use</button></div>
+      <div class="card">
+        <h3>Dice tray colour</h3>
+        <div class="swatches" id="traySwatches"></div>
+        <label class="custom-color" style="margin-top:10px"><input type="color" id="trayCustom" value="#1F5A3A" aria-label="Dice tray colour">Pick any colour</label>
+        <p class="hint" style="margin-top:8px">The tray changes straight away and stays the same for every dice style.</p>
+      </div>
       <div class="card" id="savedCard" hidden><h3>Saved styles</h3><div class="skin-list" id="skinList"></div></div>
     </div>
   </div>
@@ -4809,7 +4810,7 @@ This typically indicates that your device does not have a healthy Internet conne
       ${a("camps","camps","Campaigns",i.campaigns.length?_g(i.campaigns.length,"campaign")+" \xB7 join by code":"Start one or join by code")}
       ${a("dm","dm","GM tools","Combat tracker, encounters, private notes")}
       ${a("monsters","monsters","Monster book",`${QE} monsters${o?" + "+o+" of yours":", or make your own"}`)}
-      ${a("styles","styles","Dice styles",c?"Using "+c.name:"Colours, finishes, your own image")}
+      ${a("styles","styles","Dice styles",c?"Using "+c.name+" \xB7 tray colour":"Dice colours, finishes, tray colour")}
       ${a("settings","settings","Settings","Accent colour, appearance, sound")}
     </div></section>
     <button class="home-foot${l?" on":""}" data-go="settings"><i></i><span>${l?"Signed in as "+es(oi.user.email)+". Saved to your account.":"Everything is saved on this device."}</span><u>${l?"Account":En?"Sign in":"Settings"}</u></button>
